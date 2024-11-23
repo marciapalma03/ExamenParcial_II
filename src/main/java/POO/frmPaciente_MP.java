@@ -42,6 +42,7 @@ public class frmPaciente_MP extends javax.swing.JFrame {
         txtEnfermedad = new javax.swing.JTextField();
         btnAceptar = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
+        btnMostrar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Registro Paciente");
@@ -100,6 +101,13 @@ public class frmPaciente_MP extends javax.swing.JFrame {
             }
         });
 
+        btnMostrar.setText("Mostrar");
+        btnMostrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMostrarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -130,10 +138,12 @@ public class frmPaciente_MP extends javax.swing.JFrame {
                                 .addGap(45, 45, 45)
                                 .addComponent(txtDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(40, 40, 40)
+                        .addGap(19, 19, 19)
                         .addComponent(btnAceptar)
                         .addGap(18, 18, 18)
-                        .addComponent(btnCancelar)))
+                        .addComponent(btnCancelar)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnMostrar)))
                 .addContainerGap(109, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -162,7 +172,8 @@ public class frmPaciente_MP extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAceptar)
-                    .addComponent(btnCancelar))
+                    .addComponent(btnCancelar)
+                    .addComponent(btnMostrar))
                 .addContainerGap(119, Short.MAX_VALUE))
         );
 
@@ -191,11 +202,30 @@ public class frmPaciente_MP extends javax.swing.JFrame {
 
     private void btnAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptarActionPerformed
         // TODO add your handling code here:
+        lista.add(new Paciente_MP(
+        txtNombre.getText(),
+        txtEdad.getText(),
+        txtDireccion.getText(),
+        txtNroHistorial.getText(),
+        txtEnfermedad.getText())
+        );
     }//GEN-LAST:event_btnAceptarActionPerformed
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnCancelarActionPerformed
+
+    private void btnMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarActionPerformed
+        // TODO add your handling code here:
+        for(Paciente_MP item:lista)
+        {
+            System.out.println("Nombre: " + item.getNombre_MP());
+            System.out.println("Edad: " + item.getEdad_MP());
+            System.out.println("Direccion: " + item.getDireccion_MP());
+            System.out.println("Nro. Historial: " + item.getNro_Historial_MP());
+            System.out.println("Enfermedad: " + item.getEnfermedad_MP());
+        }
+    }//GEN-LAST:event_btnMostrarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -235,6 +265,7 @@ public class frmPaciente_MP extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAceptar;
     private javax.swing.JButton btnCancelar;
+    private javax.swing.JButton btnMostrar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

@@ -11,10 +11,10 @@ package POO;
 public class Persona_MP 
 {
     private String Nombre_MP;
-    private Integer Edad_MP;
+    private String Edad_MP;
     private String Direccion_MP;
 
-    public Persona_MP(String Nombre_MP, Integer Edad_MP, String Direccion_MP) {
+    public Persona_MP(String Nombre_MP, String Edad_MP, String Direccion_MP) {
         this.Nombre_MP = Nombre_MP;
         this.Edad_MP = Edad_MP;
         this.Direccion_MP = Direccion_MP;
@@ -28,11 +28,11 @@ public class Persona_MP
         this.Nombre_MP = Nombre_MP;
     }
 
-    public Integer getEdad_MP() {
+    public String getEdad_MP() {
         return Edad_MP;
     }
 
-    public void setEdad_MP(Integer Edad_MP) {
+    public void setEdad_MP(String Edad_MP) {
         this.Edad_MP = Edad_MP;
     }
 

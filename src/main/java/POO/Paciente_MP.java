@@ -10,20 +10,20 @@ package POO;
  */
 public class Paciente_MP extends Persona_MP
 {
-    private Integer Nro_Historial_MP;
+    private String Nro_Historial_MP;
     private String Enfermedad_MP;
 
-    public Paciente_MP(Integer Nro_Historial_MP, String Enfermedad_MP, String Nombre_MP, Integer Edad_MP, String Direccion_MP) {
+    public Paciente_MP(String Nro_Historial_MP, String Enfermedad_MP, String Nombre_MP, String Edad_MP, String Direccion_MP) {
         super(Nombre_MP, Edad_MP, Direccion_MP);
         this.Nro_Historial_MP = Nro_Historial_MP;
         this.Enfermedad_MP = Enfermedad_MP;
     }
 
-    public Integer getNro_Historial_MP() {
+    public String getNro_Historial_MP() {
         return Nro_Historial_MP;
     }
 
-    public void setNro_Historial_MP(Integer Nro_Historial_MP) {
+    public void setNro_Historial_MP(String Nro_Historial_MP) {
         this.Nro_Historial_MP = Nro_Historial_MP;
     }
 
